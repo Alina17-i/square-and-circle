@@ -1,0 +1,95 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+min-height: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.info {
+text-align: center;
+color: #000;
+width: 90%;
+}
+
+.info h1 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.info p {
+font-size: 14px;
+}
+
+.circle {
+width: 200px;
+height: 200px;
+background-color: #ff69b4;
+border-radius: 100px;
+animation: circleToSquare 3s infinite alternate ease-in-out;
+}
+
+.square {
+width: 200px;
+height: 200px;
+background-color: #3498db;
+border-radius: 0px;
+animation: squareToCircle 3s infinite alternate ease-in-out;
+}
+
+@keyframes circleToSquare {
+    0% {
+        width: 200px;
+        height: 200px;
+        background-color: #ff69b4;
+        border-radius: 100px;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        background-color: #3498db;
+        border-radius: 0px;
+    }
+}
+
+@keyframes squareToCircle {
+    0% {
+        width: 200px;
+        height: 200px;
+        background-color: #3498db;
+        border-radius: 0px;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        background-color: #ff69b4;
+        border-radius: 100px;
+    }
+}
+
+/* Дополнительные стили для красоты */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.label {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+}
